@@ -10,7 +10,7 @@ class ItLocation(MycroftSkill):
     @intent_handler(IntentBuilder("").require('it.location'))
     def handle_hr_location(self):
         nl = self.settings.get("new_location")
-        self.speak_dialog("it.location", data={"nl": nl})
+        self.speak_dialog("It.location", data={"nl": nl})
         if nl == "firstfloor":
             self.speak_dialog('first.floor')
         elif nl == "secondfloor":
